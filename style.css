@@ -1,0 +1,107 @@
+/* ปรับแต่งโทนสีหลัก (Accent) และสีประจำเว็บไซต์ได้ที่นี่ */
+:root {
+  --portfolio-accent: #174d38;
+  --portfolio-navy: #1e3d59;
+  --portfolio-cream: #fcfbf7;
+  --portfolio-cream-alt: #f4efe6;
+  --portfolio-border: #e6e0d4;
+}
+
+/* ปรับแต่งสี Accent สำหรับโหมดมืดได้ที่นี่ */
+[data-bs-theme="dark"] {
+  --portfolio-accent: #6bbfa0;
+  --portfolio-navy: #8ab4f8;
+  --portfolio-border: #343a40;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Sarabun", "Noto Sans Thai", sans-serif;
+  line-height: 1.7;
+}
+
+[data-bs-theme="light"] {
+  background-color: var(--portfolio-cream);
+}
+
+[data-bs-theme="light"] .section-alt {
+  background-color: var(--portfolio-cream-alt);
+}
+
+.text-accent {
+  color: var(--portfolio-accent) !important;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 44px;
+  height: 3px;
+  background-color: var(--portfolio-accent);
+  border-radius: 2px;
+}
+
+.card-minimal {
+  border: 1px solid var(--portfolio-border);
+  border-left: 4px solid var(--portfolio-accent);
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-minimal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.btn-accent {
+  background-color: var(--portfolio-accent);
+  border-color: var(--portfolio-accent);
+  color: #ffffff;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: var(--portfolio-navy);
+  border-color: var(--portfolio-navy);
+  color: #ffffff;
+}
+
+.btn-outline-custom {
+  border-color: var(--portfolio-accent);
+  color: var(--portfolio-accent);
+}
+
+.btn-outline-custom:hover {
+  background-color: var(--portfolio-accent);
+  border-color: var(--portfolio-accent);
+  color: #ffffff;
+}
+
+.btn-outline-theme {
+  border-color: var(--portfolio-accent);
+  color: var(--portfolio-accent);
+}
+
+.btn-outline-theme:hover {
+  background-color: var(--portfolio-accent);
+  border-color: var(--portfolio-accent);
+  color: #ffffff;
+}
+
+.badge-accent {
+  background-color: var(--portfolio-accent);
+  color: #ffffff;
+  font-weight: 500;
+  padding: 0.4em 0.7em;
+}
+
+.navbar-custom {
+  border-bottom: 1px solid var(--portfolio-border);
+}
